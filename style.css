@@ -1,0 +1,260 @@
+/*
+#000000 (Negro): Este color se utilizará en las letras de títulos o secciones importantes.
+También para la mayor parte de los textos como descripciones, nombres de productos...
+
+- #FFFFFF (Blanco): Este color se utilizará en fondos y en letras sobre fondos oscuros.
+Hace que el espacio visual sea limpio y haga contraste con el resto de colores.
+
+- #556B2F (Verde Oliva): Este color se utilizará para iconos como las redes sociales,
+secciones de la web y demás elementos específicos.También será el color de fondo al
+pasar el cursor por encima de los iconos. Creará un espacio visual relacionado con la
+naturaleza y combinará con el resto de colores seleccionados.
+
+- #8B4513 (Marrón tierra suave): Este color se utilizará para generar contraste en
+diferentes textos o letras sobre fondo blanco.
+
+- #D2A679 (Terracota Suave): Este color se utilizará para los enlaces y algún elemento
+poco frecuente sobre fondo oscuro.
+*/
+
+html{
+    width: 100%;
+    height: 100%;
+    font-family: Helvetica;
+}
+
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    width: 100%;
+    height: 80vh;
+    margin: 0;
+    background-image: linear-gradient(to top, rgb(210,166,121,0.5), rgba(210,166,121,0)),url("img/header_back.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#titulo{
+    padding: 0;
+    font-size: 3vw;
+    color: #fff;
+    height: 55%;
+    padding: 40px ;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#titulo > h1{
+    text-shadow: 2px 2px 2px #cccbcb;
+    margin: 0;
+}
+
+
+/* Nav Bar */
+
+    nav {
+        height: 15%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 20px;
+        /*background-color: #556b2fb0;*/
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: #fff;
+        text-shadow: 0px 1px 1px #cccbcb;
+        font-size: 1vw;
+        text-align: center;
+        padding: 14px 16px;
+        font-weight: bold;
+        position: relative;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #fff;
+    }
+
+    a::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #D2A679;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+    a:hover::before {
+        transform: scaleX(1);
+    }
+
+    .active::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #d2a679;
+        transform: scaleX(1);
+        transition: transform 0.3s ease;
+    }
+
+    .redes{
+        justify-self: flex-end;
+        padding: 5px;
+        height: 35px;
+    }
+
+    .redes_img{
+        height: 35px;
+    }
+
+/* --- */
+
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#marca{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(to top, rgb(85, 107, 47,0.5), rgba(85, 107, 47,0.5)),url(img/marca_back.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    width: 100vw;
+}
+
+#marca_img{
+    margin: 40px 0 40px 0;
+    border-radius: 700px;
+}
+
+
+#estilos_wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.estilo_de_producto{
+    display: flex;
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #556B2F ;
+    margin: 5px;
+}
+
+.estilo_de_producto h2:nth-of-type(1) {
+    text-align: center;
+    width: auto;
+    color: #fff;
+}
+
+/* Productos */
+
+    content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 30px;
+    }
+
+
+    .producto{
+        display: flex;
+        justify-content: stretch;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+        border-radius: 20px;
+        margin: 40px 20px 0px 20px;
+
+        -webkit-box-shadow: -1px 8px 8px 5px rgba(189,189,189,0.56);
+        -moz-box-shadow: -1px 8px 8px 5px rgba(189,189,189,0.56);
+        box-shadow: -1px 8px 8px 5px rgba(189,189,189,0.56);
+    }
+
+    h2,h3{
+        text-align: center;
+        word-wrap: break-word;
+        white-space: normal;
+        margin: 8px;
+        width: 250px;
+    }
+
+    h3{
+        font-style: italic;
+    }
+
+    .producto_img{
+        border: 5px solid #556B2F;
+        border-radius: 20px;
+        width: 400px;
+        height: 600px;
+    }
+
+    .materiales_wrapper{
+        background-color: #556B2F;
+        border-radius: 20px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        color: #fff;
+    }
+
+    .materiales{
+        margin: 0;
+        padding: 10px;
+    }
+
+/* --- */
+
+footer{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #556B2F;
+}
