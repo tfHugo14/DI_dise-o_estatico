@@ -1,32 +1,19 @@
 /*
-#000000 (Negro): Este color se utilizará en las letras de títulos o secciones importantes.
-También para la mayor parte de los textos como descripciones, nombres de productos...
 
-- #FFFFFF (Blanco): Este color se utilizará en fondos y en letras sobre fondos oscuros.
-Hace que el espacio visual sea limpio y haga contraste con el resto de colores.
+* {
+    box-sizing: border-box;
+}
 
-- #556B2F (Verde Oliva): Este color se utilizará para iconos como las redes sociales,
-secciones de la web y demás elementos específicos.También será el color de fondo al
-pasar el cursor por encima de los iconos. Creará un espacio visual relacionado con la
-naturaleza y combinará con el resto de colores seleccionados.
-
-- #8B4513 (Marrón tierra suave): Este color se utilizará para generar contraste en
-diferentes textos o letras sobre fondo blanco.
-
-- #D2A679 (Terracota Suave): Este color se utilizará para los enlaces y algún elemento
-poco frecuente sobre fondo oscuro.
 */
 
 html{
     width: 100%;
-    height: 100%;
     font-family: Helvetica;
 }
 
 body{
     margin: 0;
     width: 100%;
-    height: 100%;
 }
 
 header{
@@ -41,10 +28,11 @@ header{
 
 #titulo{
     padding: 0;
-    font-size: 3vw;
+    font-size: 3rem;
     color: #fff;
     height: 55%;
-    padding: 40px ;
+    width: 80%;
+    padding: 80px 0px 0px 80px;
     text-align: center;
     display: flex;
     justify-content: flex-start;
@@ -54,19 +42,19 @@ header{
 #titulo > h1{
     text-shadow: 2px 2px 2px #cccbcb;
     margin: 0;
+    width: 100%;
+    text-align: left;
 }
 
 
 /* Nav Bar */
-
     nav {
         height: 15%;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
-        margin-right: 20px;
-        /*background-color: #556b2fb0;*/
+        margin: 0 60px 0 60px ;
     }
 
     ul {
@@ -84,7 +72,7 @@ header{
         display: block;
         color: #fff;
         text-shadow: 0px 1px 1px #cccbcb;
-        font-size: 1vw;
+        font-size: 1.3rem;
         text-align: center;
         padding: 14px 16px;
         font-weight: bold;
@@ -100,11 +88,11 @@ header{
         content: "";
         position: absolute;
         display: block;
-        width: 100%;
+        width: 90%;
         height: 2px;
         bottom: 0;
         left: 0;
-        background-color: #D2A679;
+        background-color: #556B2F;
         transform: scaleX(0);
         transition: transform 0.3s ease;
     }
@@ -117,13 +105,17 @@ header{
         content: "";
         position: absolute;
         display: block;
-        width: 100%;
+        width: 90%;
         height: 2px;
         bottom: 0;
         left: 0;
-        background-color: #d2a679;
+        background-color: #556B2F;
         transform: scaleX(1);
         transition: transform 0.3s ease;
+    }
+
+    .active{
+        color: #556B2F;
     }
 
     .redes{
@@ -131,11 +123,6 @@ header{
         padding: 5px;
         height: 35px;
     }
-
-    .redes_img{
-        height: 35px;
-    }
-
 /* --- */
 
 main{
@@ -147,19 +134,19 @@ main{
 
 #marca{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     background-image: linear-gradient(to top, rgb(85, 107, 47,0.5), rgba(85, 107, 47,0.5)),url(img/marca_back.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 20px 0 20px 0;
     height: 90vh;
     width: 100vw;
 }
 
 #marca_img{
-    margin: 40px 0 40px 0;
     border-radius: 700px;
 }
 
@@ -183,11 +170,157 @@ main{
     margin: 5px;
 }
 
+#estilos_wrapper div{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#vestido_largo{background-image: linear-gradient(to top, rgb(85, 107, 47,0.5), rgba(85, 107, 47,0.5)), url("./img/estilos/estilo_vestido_largo.png");}
+
+#vestido_corto{background-image: linear-gradient(to top, rgb(85, 107, 47,0.5), rgba(85, 107, 47,0.5)), url("./img/estilos/estilo_vestido_corto.png");}
+
+#boda{background-image: linear-gradient(to top, rgb(85, 107, 47,0.5), rgba(85, 107, 47,0.5)), url("./img/estilos/estilo_boda.jpg");}
+
+#conjunto{background-image: linear-gradient(to top, rgb(85, 107, 47,0.5), rgba(85, 107, 47,0.5)), url("./img/estilos/estilo_conjunto.jpg");}
+
 .estilo_de_producto h2:nth-of-type(1) {
     text-align: center;
     width: auto;
     color: #fff;
 }
+
+/* Search Options */
+
+#selected_estilo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+#selected_estilo > div:first-of-type {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #556B2F;
+}
+
+#selected_estilo h3{
+    font-size: 2rem;
+    align-self: center;
+    color: #fff;
+    font-style: normal;
+}
+
+#search_options{
+    height: 100%;
+    background-color: #fff;
+    border-bottom: 5px solid #556B2F;
+    padding-left: 20px;
+}
+
+#search_options form{
+    height: 100%;
+}
+
+#search_options form > div:first-of-type {
+    display: flex;
+    justify-content: center;
+}
+
+input[type=text] { /*Search bar*/
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=text]:focus {
+    border: 3px solid #556B2F;
+}
+
+#submit{
+    font-size: 28px;
+    height: 2.81rem;
+    background-color: #556B2F;
+    color: #fff;
+    margin-top: 8px;
+    border-left: none;
+    border-top: 3px solid #ccc;
+    border-right: 3px solid #ccc;
+    border-bottom: 3px solid #ccc;
+}
+
+/* temporadas checkmarks */
+    .temporadas {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .temporadas input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+    }
+
+    .temporadas:hover input ~ .checkmark {
+        background-color: #ccc;
+    }
+
+    .temporadas input:checked ~ .checkmark {
+       background-color: #2196F3;
+    }
+
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    .temporadas input:checked ~ .checkmark:after {
+        display: block;
+    }
+
+    .temporadas .checkmark:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    /* -- */
+
+/* --- */
+
+
 
 /* Productos */
 
@@ -196,7 +329,7 @@ main{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 30px;
+        padding: 30px 0 30px 0;
     }
 
 
@@ -207,7 +340,7 @@ main{
         flex-direction: column;
         padding: 10px;
         border-radius: 20px;
-        margin: 40px 20px 0px 20px;
+        margin: 20px 20px 0px 20px;
 
         -webkit-box-shadow: -1px 8px 8px 5px rgba(189,189,189,0.56);
         -moz-box-shadow: -1px 8px 8px 5px rgba(189,189,189,0.56);
@@ -254,7 +387,29 @@ main{
 footer{
     padding: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #556B2F;
+}
+
+footer a {
+    font-size: 0.9em;
+    padding: 5px;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: #D2A679;
+}
+
+footer p{
+    color: #fff;
+    font-style: italic;
+}
+
+.redes_img{
+    height: 35px;
+    padding: 5px;
 }

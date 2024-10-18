@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <header>
@@ -24,21 +25,57 @@
         </header>
 
         <main>
-            
-            <div id="marca">
-                <img id="marca_img" src="img/DC(1).png" alt="">
+
+            <section id="marca">
+                <img id="marca_img" src="img/logo/DC(1).png" alt="">
 
                 <div id="estilos_wrapper">
-                    <div class="estilo_de_producto"><h2>Vestido largo</h2></div>
-                    <div class="estilo_de_producto"><h2>Vestido corto</h2></div>
-                    <div class="estilo_de_producto"><h2>Boda</h2></div>
-                    <div class="estilo_de_producto"><h2>Cojunto</h2></div>
+                    <div class="estilo_de_producto" id="vestido_largo"><h2>Vestido largo</h2></div>
+                    <div class="estilo_de_producto" id="vestido_corto"><h2>Vestido corto</h2></div>
+                    <div class="estilo_de_producto" id="boda"><h2>Boda</h2></div>
+                    <div class="estilo_de_producto" id="conjunto"><h2>Cojunto</h2></div>
+                </div>
+            </section>
+
+            <div id="selected_estilo">
+                <div>
+                    <h3> Vestidos largos </h3>
+                </div>
+                <div id="search_options">
+                    <form>
+                        <div>
+                            <input type="text" id="search" name="search" placeholder="Buscar...">
+                            <button id="submit" type="submit"> <i class="fa fa-search"></i> </button>
+                        </div>
+
+                        <label class="temporadas"> Primavera
+                            <input type="checkbox" checked="checked"> 
+                            <span class="checkmark"></span>
+                          </label>
+
+                          <label class="temporadas"> Verano
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                          </label>
+
+                          <label class="temporadas"> Otoño
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                          </label>
+
+                          <label class="temporadas"> Invierno
+                            <input type="checkbox" checked="checked"> 
+                            <span class="checkmark"></span>
+                          </label>
+
+                    </form>
                 </div>
             </div>
+
             <content>
                 <!-- productos -->
                 <div class="producto">
-                    <img class="producto_img" src="img/producto1.jpg" alt="">
+                    <img class="producto_img" src="img/productos/producto1.jpg" alt="">
                     <h2>Vestido estilo mesonera con estampado de flores</h2>
                     <h3>83,90 €</h3>
                     <div class="materiales_wrapper">
@@ -47,7 +84,7 @@
                 </div>
 
                 <div class="producto">
-                    <img class="producto_img" src="img/producto2.png" alt="">
+                    <img class="producto_img" src="img/productos/producto2.png" alt="">
                     <h2>Vestido Arantza Natural S</h2>
                     <h3>75,96 €</h3>
                     <div class="materiales_wrapper">
@@ -56,7 +93,7 @@
                 </div>
 
                 <div class="producto">
-                    <img class="producto_img" src="img/producto3.png" alt="">
+                    <img class="producto_img" src="img/productos/producto3.png" alt="">
                     <h2>Vestido de lino midi con estampado floral</h2>
                     <h3>119,89 €</h3>
                     <div class="materiales_wrapper">
@@ -65,7 +102,7 @@
                 </div>
 
                 <div class="producto">
-                    <img class="producto_img" src="img/producto1.jpg" alt="">
+                    <img class="producto_img" src="img/productos/producto1.jpg" alt="">
                     <h2>Vestido estilo mesonera con estampado de flores</h2>
                     <h3>83,90 €</h3>
                     <div class="materiales_wrapper">
@@ -74,7 +111,7 @@
                 </div>
 
                 <div class="producto">
-                    <img class="producto_img" src="img/producto2.png" alt="">
+                    <img class="producto_img" src="img/productos/producto2.png" alt="">
                     <h2>Vestido Arantza Natural S</h2>
                     <h3>75,96 €</h3>
                     <div class="materiales_wrapper">
@@ -83,7 +120,7 @@
                 </div>
 
                 <div class="producto">
-                    <img class="producto_img" src="img/producto3.png" alt="">
+                    <img class="producto_img" src="img/productos/producto3.png" alt="">
                     <h2>Vestido de lino midi con estampado floral</h2>
                     <h3>119,89 €</h3>
                     <div class="materiales_wrapper">
@@ -92,7 +129,7 @@
                 </div>
 
                 <div class="producto">
-                    <img class="producto_img" src="img/producto1.jpg" alt="">
+                    <img class="producto_img" src="img/productos/producto1.jpg" alt="">
                     <h2>Vestido estilo mesonera con estampado de flores</h2>
                     <h3>83,90 €</h3>
                     <div class="materiales_wrapper">
@@ -101,7 +138,7 @@
                 </div>
 
                 <div class="producto">
-                    <img class="producto_img" src="img/producto2.png" alt="">
+                    <img class="producto_img" src="img/productos/producto2.png" alt="">
                     <h2>Vestido Arantza Natural S</h2>
                     <h3>75,96 €</h3>
                     <div class="materiales_wrapper">
@@ -110,7 +147,7 @@
                 </div>
 
                 <div class="producto">
-                    <img class="producto_img" src="img/producto3.png" alt="">
+                    <img class="producto_img" src="img/productos/producto3.png" alt="">
                     <h2>Vestido de lino midi con estampado floral</h2>
                     <h3>119,89 €</h3>
                     <div class="materiales_wrapper">
@@ -122,9 +159,13 @@
         </main>
 
         <footer>
-            <img class="redes_img" src="img/facebook_2.png" alt="">
-            <img class="redes_img" src="img/x_2.png" alt="">
-            <img class="redes_img" src="img/instagram_2.png" alt="">
+            <div>
+                <a href=""><img class="redes_img" src="img/redes/facebook_2.png" alt=""></a>
+                <a href=""><img class="redes_img" src="img/redes/x_2.png" alt=""></a>
+                <a href=""><img class="redes_img" src="img/redes/instagram_2.png" alt=""></a>
+            </div>
+            <p> © Sep 2024 VerdElegancia. All rights reserved. </p>
+            <div> <a href="terminos_de_uso">Terminos de uso</a> <a href="politica_de_privacidad">Politica de privacidad</a> </div>
         </footer>
     </body>
 </html>
