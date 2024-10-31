@@ -1,23 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Producto - Ejemplo</title>
+        <style>
+            body {
+                height: 100vh;
+                font-family: Helvetica;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+            }
+            .product-container {
+                display: flex;
+                width: 80%;
+                height: 100%;
+                flex-direction: row;
+                align-items: flex-start;
+                text-align: center;
+                justify-content: space-evenly;
+                border: 1px solid #e2e2e2;
+                padding: 20px;
+                border-radius: 8px;
+            }
+            .product-image img {
+                max-width: 300px;
+                border-radius: 8px;
+            }
+            .product-details {
+                text-align: left;
+            }
+            .product-title {
+                font-size: 24px;
+                font-weight: bold;
+                color: #333;
+            }
+            .product-price {
+                font-size: 22px;
+                color: #B12704;
+                margin: 10px 0;
+            }
+            .product-description {
+                font-size: 16px;
+                line-height: 1.5;
+                color: #555;
+            }
+            .rating {
+                color: #FFA41C;
+                font-size: 18px;
+            }
+            .buy-button {
+                background-color: #FFD814;
+                color: #333;
+                padding: 12px 20px;
+                font-size: 18px;
+                text-decoration: none;
+                border-radius: 5px;
+                margin-top: 20px;
+                display: inline-block;
+            }
+            .buy-button:hover {
+                background-color: #F7CA00;
+            }
+
+            nav {
+                height: 15%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                background-color: #556B2F;
+                width: 100%;
+            }
+
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            
+            li {
+                float: left;
+            }
+
+            li a {
+                display: block;
+                color: #fff;
+                text-shadow: 0px 1px 1px #cccbcb;
+                font-size: 1.3rem;
+                text-align: center;
+                padding: 14px 16px;
+                font-weight: bold;
+                position: relative;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: #fff;
+            }
+
+            a::before {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 90%;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: #556B2F;
+                transform: scaleX(0);
+                transition: transform 0.3s ease;
+            }
+
+            a:hover::before {
+                transform: scaleX(1);
+            }
+
+            .active::before {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 90%;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: #556B2F;
+                transform: scaleX(1);
+                transition: transform 0.3s ease;
+            }
+
+            .active{
+                text-decoration: underline #cccbcb;
+            }
+
+            .redes{
+                justify-self: flex-end;
+                padding: 5px;
+                height: 35px;
+            }
+        </style>
+    </head>
     <body>
-        
-        <content>
-            <div class="producto">
-                <a href="producto.html"><img class="producto_img" src="img/productos/producto1.jpg" alt=""></a>
-                <h2>Vestido estilo mesonera con estampado de flores</h2>
-                <h3>83,90 €</h3>
-                <div class="materiales_wrapper">
-                    <p class="materiales">materiales</p>
-                </div>
+        <nav>
+            <ul>
+                <li><a class="active" href="#productos">Productos</a></li>
+                <li><a href="#destacados">Destacados</a></li>
+                <li><a href="#diseña_tu_vestido">Diseña tu vestido</a></li>
+                <li><a href="#sobre_nosotros">Sobre nosotros</a></li>
+                <li><a href="#colabora">Colabora</a></li>
+            </ul>              
+        </nav>
+
+        <div class="product-container">
+            <div class="product-image">
+                <img src="img/productos/producto1.jpg" alt="Imagen del Producto">
             </div>
-        </content>
+            <div class="product-details">
+                <div class="product-title">Vestido estilo mesonera con estampado de flores</div>
+                <div class="rating">★★★★☆ (1200 reseñas)</div>
+                <div class="product-price">83,90 €</div>
+                <div class="product-description">
+                    Esta es una descripción de un producto muy interesante
+                </div>
+                <a href="#" class="buy-button">Agregar al carrito</a>
+            </div>
+        </div>
 
     </body>
 </html>
